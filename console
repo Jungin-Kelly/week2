@@ -1,0 +1,43 @@
+alert('어쩌구 저쩌구 안녕하세요'.length) #길이세기
+
+# 사람 랜덤으로 추출하기 
+var 당첨자수 =2;
+var 댓글전택자 = '(표본)'
+function shuffle(a){
+    for (let i=a.length; i; i--){
+        let j=Math.floor(Math.random()*i);
+        [a[i-1], a[j]] = [a[j], a[i-1]];
+    }
+}
+
+var list = [];
+document.querySelectorAll(댓글선택자).forEach(function(e){
+    list.push(e.innerText);
+});
+list=list.filter((v,i,a)=> a.indexOf(v)===i);
+shuffle(list)
+console.log(list.slice(0,당첨자수));
+
+alert(1)
+alert(1+1)
+1+1
+2-1
+2*4
+6/2
+"hello world" 
+"hello world".length
+"hello world".toUpperCase()
+"hello world".indexOf('o')
+"hello world".indexOf('world')
+"   hello   ".trim()   #공백 없애기
+"1"+"1"+"1" #111출력
+
+#변수와 대입 연산자
+x = 1;
+y = 1;
+x+y;    #2
+1=2;    #이렇게 하면 에러가 뜸
+
+var name = "kelly";
+alert("어쩌구"+name+"저쩌구"+name+"얄릴리")
+
