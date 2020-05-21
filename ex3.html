@@ -2,8 +2,10 @@
 <html>
 <head>
   <title>WEB1 - <span class = "js">JavaScript</span>
-</title>
+  </title>
   <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="colors.js"></script>
   <style>
       .js{
           font-weight: bold;
@@ -19,12 +21,12 @@
 </head>
 <body style="background-color: black;">
   
-  <input type ="button" value="night" onclick="
+  <input id = "night_day" type ="button" value="night" onclick="
   var target = document.querySelector('body');
-  if(this.value == 'night'){
+  if(this.value === 'night'){
     target.style.backgroundColor = 'black';
     target.style.color = 'white';
-    this.value == 'day';
+    this.value = 'day';
 
     var alist = document.querySelectorAll('a');
     var i = 0;
@@ -35,13 +37,14 @@
   } else {
     target.style.backgroundColor = 'white';
     target.style.color = 'black';
-    this.value == 'night';
+    this.value = 'night';
 
     var alist = document.querySelectorAll('a');
     var i = 0;
     while(i < alist.length){
       alist[i].style.color = 'blue';
       i = i + 1;
+  }
   }
 " >
   <h1><a href="index.html">WEB1</a></h1>
@@ -66,16 +69,8 @@
        the ECMAScript specification, with some engines not supporting the spec
         fully, and with many engines supporting additional features beyond ECMA.
   </p>
-  <input type ="button" value="night" onclick="
-    if(this.value == 'night'){
-      target.style.backgroundColor = 'black';
-      target.style.color = 'white';
-      this.value == 'day';
-    } else {
-      target.style.backgroundColor = 'white';
-      target.style.color = 'black';
-      this.value == 'night';
-    }
-  " >
+  <input id = "night_day" type ="button" value="night" onclick="
+  nightDayHandler(this);
+  ">
 </body>
 </html>
